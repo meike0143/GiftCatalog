@@ -25,10 +25,10 @@
                         </div>
                         <div class="p-2">
                             <x-input-label for="description" :value="__('Description')" />
-                            <x-journey.text-area name="description" rows="5" class="mt-1 block w-full border-gray-300 focus:border-indigo-500
+                            <x-gift.text-area name="description" rows="5" class="mt-1 block w-full border-gray-300 focus:border-indigo-500
                                             focus:ring-indigo-500 rounded-md shadow-sm"
                                                  placeholder="Enter the gift's description..."
-                                                 value="{{ old('description', $gift) }}" ></x-journey.text-area>
+                                                 value="{{ old('description', $gift) }}" ></x-gift.text-area>
                             <x-input-error class="mt-2" :messages="$errors->get('description')" />
                         </div>
                         <div class="p-2">
