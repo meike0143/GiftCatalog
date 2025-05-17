@@ -6,6 +6,12 @@
 
 ## Features
 * Registration & login functionalities
+* Gifts CRUD Module:
+    * View a list of existing gifts
+    * Create a new gifts **(requires an account)**
+    * View existing gifts
+    * Edit existing gifts **(requires an account)**
+    * Delete existing gifts **(requires an account)**
 
 ## Licensing
 
