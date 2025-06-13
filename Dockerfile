@@ -29,6 +29,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && npm install \
     && npm run build
 
+CMD php artisan config:clear
+
 # Set permissions
 RUN chown -R www-data:www-data storage bootstrap/cache
 
