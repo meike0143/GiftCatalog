@@ -18,9 +18,6 @@ WORKDIR /var/www/html
 # Copy application files
 COPY . .
 
-# Clear Laravel caches to ensure fresh configurations
-RUN php artisan config:clear && php artisan cache:clear
-
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- \
     && mv composer.phar /usr/local/bin/composer \
@@ -30,6 +27,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
     && npm install
+
+# Clear Laravel caches to ensure fresh configurations
+RUN php artisan config:clear && php artisan cache:clear
 
 # Set permissions
 RUN chown -R www-data:www-data storage bootstrap/cache
