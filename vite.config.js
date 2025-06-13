@@ -12,4 +12,7 @@ export default defineConfig({
         outDir: 'public/build',
     },
     base: 'https://giftcatalog.onrender.com/build/', // Force HTTPS asset URLs
+    server: {
+        https: true,
+    },
 });
