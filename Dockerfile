@@ -1,4 +1,4 @@
-# Use an PHP image with necessary extensions
+# Use a PHP image with necessary extensions
 FROM php:8.2-fpm
 
 # Install system dependencies
@@ -8,8 +8,9 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
+    libpq-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql
+    && docker-php-ext-install gd pdo pdo_mysql pdo_pgsql
 
 # Set working directory
 WORKDIR /var/www/html
@@ -33,6 +34,6 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 # Expose ports
 EXPOSE 80
 
-# Start Laravel application
+# Start Laravel application with migrations
 CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=80
 
