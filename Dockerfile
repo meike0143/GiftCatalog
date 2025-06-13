@@ -26,7 +26,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 # Install Node dependencies
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
-    && npm install
+    && npm install \
+    && npm run build
 
 # Set permissions
 RUN chown -R www-data:www-data storage bootstrap/cache
