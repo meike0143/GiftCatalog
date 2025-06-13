@@ -10,7 +10,7 @@
 
                     </div>
                     <br>
-                    <form action="{{ route('gifts.destroy', $gift) }}" method="POST">
+                    <form action="{{ route('gifts.destroy', $gift, true) }}" method="POST">
                         @csrf
                         @method("DELETE")
                         <h2 class="subtitle is-6 is-italic">
