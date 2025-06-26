@@ -2,7 +2,7 @@
 
 ## Authors
 
-* **Meike Martens** - *Development* - [meike0143](https://github.com/meike0143)
+* **Meike** - *Development* - [meike0143](https://github.com/meike0143)
 
 ## Features
 * Registration & login functionalities
